@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.elton.devsuperior.dslinst.dto.GameDTO;
 import com.elton.devsuperior.dslinst.dto.GameMinDTO;
-import com.elton.devsuperior.dslinst.entities.Game;
 import com.elton.devsuperior.dslinst.services.GameService;
 
 @RestController
