@@ -12,12 +12,13 @@ RUN mvn clean package -DskipTests
 
 # Etapa final: imagem de execução
 FROM eclipse-temurin:17-jre-jammy
-
 WORKDIR /app
+
+# Expõe a porta (boa prática)
 EXPOSE 8080
 
-# Copia o JAR gerado (assumindo que é o único .jar em target/)
-COPY --from=build /app/target/*.jar /app/app.jar
+# CORREÇÃO: Nome exato do JAR gerado
+COPY --from=build /app/target/dslinst-0.0.1-SNAPSHOT.jar /app/app.jar
 
 # Executa a aplicação
 ENTRYPOINT ["java", "-jar", "app.jar"]
