@@ -33,3 +33,34 @@ A aplicação segue uma arquitetura modular e escalável:
 ### 2. Executar os containers
 ```bash
 docker-compose up --build
+
+ Screenshots
+1. Containers Docker em execução
+
+
+Os containers estão em execução: ubuntu:24.04, dslist-app e dev. O container dslist-app expõe a porta 8080 para acesso local. 
+
+2. Banco de Dados PostgreSQL (pgAdmin)
+
+
+Visualização da tabela tb_game_list no pgAdmin. Os dados são armazenados com ID e nome da categoria de jogos. 
+
+3. Logs no Render (deploy online)
+
+
+O serviço foi iniciado com sucesso no Render. O log mostra que a aplicação está "live" e acessível em https://devlist-aacp.onrender.com. 
+
+🛠️ Testando a API (Postman)
+Incluí screenshots do Postman para mostrar que a API funciona corretamente:
+
+4. Requisição GET /games
+
+
+Retorna todos os jogos cadastrados na base de dados. 
+
+5. Requisição POST /games
+
+
+Cria um novo jogo com nome, descrição e categoria. 
+
+
